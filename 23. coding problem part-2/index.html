@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding problem part-2</title>
+</head>
+<body>
+    <script>
+       // max
+       const salaman = 60;
+       const disha = 50;
+       if(salaman > disha){
+            console.log('salman will get the apple')
+       }
+       else{
+        console.log('disha will get the apple')
+       }
+
+    console.log('-----------------------------------------')
+
+       // inside a function Biggest
+       function getMax(num1, num2){
+            if(num1 > num2){
+                return num1
+            }
+            else{
+                return num2
+            }
+       }
+       const max1 = getMax(56, 79);
+       const max2 = getMax(96, 99)
+       const ultimateMax = getMax(max1, max2)
+       console.log('max of two is:', max1, max2);
+       console.log('max of two is:', ultimateMax);
+
+    console.log('-----------------------------------------')
+
+       // 3 of max
+        const jim = 56;
+        const kim = 54;
+        const tim = 50;
+        if(jim > tim && jim > kim){
+            console.log('jim is the ultimate boss');
+        }
+        else if(kim > tim && kim > jim){
+            console.log('kim is the boss');
+        }
+        else{
+            console.log('tim is the boss');
+        }
+
+    console.log('-----------------------------------------')
+
+        function maxOfthree(num1, num2, num3){
+            if(num1 > num2 && num1 > num3){
+                console.log('num1 is the ultimate boss');
+            }
+            else if(num2 > num1 && num2 > num3){
+                console.log('num2 is the boss');
+            }
+            else{
+                console.log('num3 is the boss');
+            }
+        }
+        maxOfthree(30, 50, 66);
+
+    console.log('-----------------------------------------')  
+
+        const max = Math.max(12, 1, 56);
+        console.log('max isusing Math.max', max);
+      
+    console.log('-----------------------------------------')  
+    //------------------------------------------------------     
+
+    </script>
+</body>
+</html>
