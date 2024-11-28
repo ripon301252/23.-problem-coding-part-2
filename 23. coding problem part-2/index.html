@@ -71,7 +71,66 @@
         console.log('max isusing Math.max', max);
       
     console.log('-----------------------------------------')  
-    //------------------------------------------------------     
+    //------------------------------------------------------   
+
+        
+                        // 6 no. video
+            // up to 100 --> 100 tk
+            // more then 101 to 200 --> 90 tk
+            // more then 200 --> 70 tk
+
+            function discountedPrice(quantity){
+                if(quantity <= 100){
+                    const total = quantity * 100;
+                    return total;
+                }
+                else if(quantity <= 200){
+                    const total = quantity * 90;
+                    return total;
+                }
+                else{
+                    const total = quantity * 70;
+                    return total
+                }
+            }
+            const total = discountedPrice(201);
+            console.log('201 pcs is cost', total, 'tk');
+
+    console.log('-------------------------------------')
+            
+            // first 100   --> 100
+            // 101 to 200  --> 90
+            // above 200   --> 70
+
+            function layeredDiscountedTotal(quantity){
+                const first100Pricr = 100; // 1st 100 er price
+                const second100Price = 90;
+                const above200Price = 70;
+
+                if(quantity <= 100){ // quantity jodi 100 er kom ba soman hoy
+                    const total = quantity * first100Pricr;
+                    return total;
+                }
+                else if(quantity <= 200){ // quantity jodi 200 er kom ba soman hoy
+                    const first100PTotal = 100 * first100Pricr;
+                    const remainingQuantity = quantity - 100;
+                    const remainingTotal = remainingQuantity * second100Price;
+                    const total = first100PTotal + remainingTotal;
+                    return total;
+                }
+                else{
+                    const first100PTotal = 100 * first100Pricr;
+                    const second100Total = 100 * second100Price;
+                    const remainingQuantity = quantity - 200;
+                    const remainingTotal = remainingQuantity * above200Price;
+                    const total = first100PTotal + second100Total + remainingTotal
+                    return total;
+                }
+            }
+            const total2 = layeredDiscountedTotal(201);
+            console.log(total2);
+
+
 
     </script>
 </body>
